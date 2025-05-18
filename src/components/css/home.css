@@ -1,0 +1,585 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=PT+Mono&family=Questrial&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mobile {
+    display: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s;
+}
+
+a:hover,
+a:focus-visible {
+    text-decoration: underline;
+    outline: none;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline-offset: 2px;
+}
+
+header {
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+header h1,
+h2 {
+    font-family: "PT Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header h1 {
+    font-weight: 700;
+}
+
+/* Contact input tab */
+.contact {
+    border-radius: 14px;
+    height: 2.2rem;
+    color: #111111;
+    width: 25rem;
+    padding: 0 2rem;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.gitlink {
+    width: 3.2rem;
+    transition: transform 0.2s;
+}
+
+.gitlink:hover {
+    transform: scale(1.08) rotate(-4deg);
+}
+
+.separator a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.separator a img {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+.left h5 {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.date_time {
+    display: flex;
+    padding-left: 4rem;
+    align-items: center;
+    gap: 2rem;
+    color: #757575;
+    font-size: 0.95rem;
+}
+
+main {
+    display: flex;
+    height: 90vh;
+    align-items: center;
+    background: #fafbfc;
+}
+
+.files {
+    width: 25vw;
+    height: inherit;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 4rem;
+    flex-direction: column;
+}
+
+.aboutMe {
+    width: 75vw;
+    height: inherit;
+    padding-left: 4rem;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.aboutMe h4 {
+    font-family: "Raleway", monospace;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.aboutMe .title {
+    font-family: "Questrial", monospace;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 80px;
+    letter-spacing: -1px;
+}
+
+.aboutMe p {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 19px;
+    line-height: 1.2;
+}
+
+.aboutMe .desc {
+    line-height: 1.4;
+}
+
+.files .folder {
+    width: 7rem;
+    transition: transform 0.2s;
+}
+
+.files .folder:hover {
+    transform: scale(1.05);
+}
+
+.files .opt {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    width: 8rem;
+    align-items: center;
+}
+
+.opt h3 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+}
+
+.foot .abticon {
+    width: 6rem;
+    transition: transform 0.2s;
+}
+
+.foot .abticon:hover {
+    transform: scale(1.08) rotate(2deg);
+}
+
+/* Footer Designing */
+.foot {
+    padding-top: 10rem;
+    width: 8rem;
+}
+
+.foot .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer {
+    padding-top: 15rem;
+    display: flex;
+}
+
+.footer span {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer p,
+.foot p {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+}
+
+.footer h3,
+.footer h4 {
+    font-family: "Questrial", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 18px;
+}
+
+.footer .getInTouch {
+    padding-left: 12rem;
+}
+
+.footer .copyright {
+    gap: 0;
+    font-size: 14px;
+    padding-left: 24rem;
+    justify-content: end;
+}
+
+.footer .copyright p {
+    font-family: "Questrial", sans-serif;
+    font-size: 14px;
+}
+
+/* Responsive adjustments for landscape view */
+@media (max-width: 1200px) {
+    header {
+        padding: 1.5rem 2rem;
+    }
+
+    .files {
+        width: 30vw;
+        padding-left: 2rem;
+    }
+
+    .aboutMe {
+        width: 70vw;
+        padding-left: 2rem;
+    }
+
+    .footer .getInTouch {
+        padding-left: 6rem;
+    }
+
+    .footer .copyright {
+        padding-left: 12rem;
+    }
+}
+
+@media (max-width: 900px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1rem 1.5rem;
+    }
+
+    .date_time {
+        padding-left: 0;
+        gap: 1rem;
+    }
+
+    .files {
+        width: 40vw;
+        padding-left: 1rem;
+    }
+
+    .aboutMe {
+        width: 60vw;
+        padding-left: 1rem;
+        gap: 1rem;
+    }
+
+    .aboutMe .title {
+        font-size: 48px;
+    }
+
+    .footer .getInTouch {
+        padding-left: 2rem;
+    }
+
+    .footer .copyright {
+        padding-left: 4rem;
+    }
+}
+
+@media (max-width: 700px) {
+    main {
+        flex-direction: column;
+        height: auto;
+        align-items: stretch;
+    }
+
+    .files,
+    .aboutMe {
+        width: 100vw;
+        padding-left: 0.5rem;
+        height: auto;
+    }
+
+    .aboutMe .title {
+        font-size: 32px;
+    }
+
+    .aboutMe h4 {
+        font-size: 16px;
+    }
+
+    .aboutMe p {
+        font-size: 16px;
+    }
+
+    .files .folder {
+        width: 5rem;
+    }
+
+    .foot,
+    .footer {
+        width: 100vw;
+        padding-top: 2rem;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 2rem;
+    }
+
+    .footer .getInTouch,
+    .footer .copyright {
+        padding-left: 0;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 500px) {
+    header {
+        padding: 0.5rem 0.5rem;
+    }
+
+    .contact {
+        width: 90vw;
+        font-size: 0.9rem;
+        padding: 0 1rem;
+    }
+
+    .aboutMe .title {
+        font-size: 22px;
+    }
+
+    .aboutMe h4,
+    .aboutMe p,
+    .footer p,
+    .footer h3,
+    .footer h4 {
+        font-size: 14px;
+    }
+
+    .files .folder {
+        width: 3.5rem;
+    }
+
+    .foot .abticon {
+        width: 3rem;
+    }
+}
+
+/* Ensure images and icons scale */
+img,
+.gitlink,
+.foot .abticon {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Universal mobile responsiveness */
+@media (max-width: 600px) {
+
+    html,
+    body {
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
+    header {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 1rem;
+        width: 100vw;
+    }
+
+    .mobile {
+        display: inline;
+    }
+
+    .left {
+        display: none;
+    }
+
+    .gitlink {
+        width: 2.2rem;
+    }
+
+    .separator {
+        font-size: 2rem;
+    }
+
+    .contact {
+        width: 80vw;
+        font-size: 0.9rem;
+        padding: 0 0.5rem;
+    }
+
+    main {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem 0.5rem;
+        align-items: stretch;
+        width: 100vw;
+        min-height: 80vh;
+        box-sizing: border-box;
+    }
+
+    .foot {
+        display: none;
+    }
+
+    .aboutMe,
+    .files {
+        width: 100vw;
+        padding-left: 0.5rem;
+        height: auto;
+    }
+
+    .options {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 90vw;
+        height: auto;
+    }
+
+    .copyright {
+        align-self: center;
+    }
+
+    .aboutMe {
+        order: 1;
+    }
+
+    .aboutMe p {
+        padding-top: 1rem;
+    }
+
+    .files {
+        order: 2;
+    }
+
+    .aboutMe .title {
+        font-size: 45px;
+        padding-left: 0.5rem;
+    }
+
+    .aboutMe .desc {
+        padding-left: 0.5rem;
+        font-size: 14px;
+    }
+
+    .aboutMe h4,
+    .footer p,
+    .footer h3,
+    .footer h4 {
+        font-size: 15px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 2rem;
+        width: 100vw;
+    }
+
+    footer p {
+        font-size: 13px;
+    }
+
+    .files {
+        padding-top: 4rem;
+    }
+
+    .files .folder {
+        width: 5rem;
+    }
+
+    .foot .abticon {
+        width: 2rem;
+    }
+
+    .options {
+        gap: 4rem;
+    }
+
+    .footer {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100vw;
+        padding: 5rem 1rem 0 1rem;
+    }
+
+    .footer .socials,
+    .footer .getInTouch {
+        flex: 1 1 auto;
+        font-weight: 600;
+        min-width: 0;
+    }
+
+    .socials h3,
+    .getInTouch h4 {
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .footer .copyright {
+        display: none;
+    }
+
+    .footer .getInTouch,
+    .footer .copyright {
+        padding-left: 0;
+        justify-content: flex-start;
+    }
+}
