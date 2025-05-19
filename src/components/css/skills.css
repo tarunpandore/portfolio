@@ -1,0 +1,41 @@
+.skills {
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: 2rem auto;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+}
+
+.skills-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.skill-card {
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+}
+
+.skill-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.skill-level {
+    margin-top: 0.5rem;
+}
+
+.skill-level-badge {
+    display: inline-block;
+    background: #e3f2fd;
+    border-radius: 4px;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.9rem;
+}
