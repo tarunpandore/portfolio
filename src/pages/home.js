@@ -164,7 +164,8 @@ export default class Home extends Component {
           <span className="socials">
           <p style={{ color: textColor }}>Socials</p>
           <a href="https://www.linkedin.com/in/tarunpandore"
-            target="_blank">
+            target="_blank"
+            rel='noopener noreferrer'>
             <h3 style={{ color: textColor }}>LINKEDIN</h3>
           </a>
           <h3 style={{ color: textColor }}>DISCORD</h3>

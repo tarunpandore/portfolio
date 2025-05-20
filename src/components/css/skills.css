@@ -39,3 +39,29 @@
     padding: 0.2rem 0.6rem;
     font-size: 0.9rem;
 }
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .skills {
+        padding: 1rem;
+        max-width: 100%;
+        margin: 1rem;
+    }
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .skill-card {
+        padding: 0.8rem;
+    }
+    .skills-title {
+        font-size: 1.3rem;
+    }
+    .skill-name {
+        font-size: 1rem;
+    }
+    .skill-level-badge {
+        font-size: 0.85rem;
+        padding: 0.18rem 0.5rem;
+    }
+}

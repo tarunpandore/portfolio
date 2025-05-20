@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import "../components/css/window.css";
 import Projects from "../components/projects";
 import Skills from "../components/skills";
@@ -13,7 +13,7 @@ export default function ProjectsExplorer(props) {
   // Track position and dragging state
   const [position, setPosition] = useState({ x: 500, y: 150 });
   const [dragging, setDragging] = useState(false);
-  const [offset, setOffset] = useState({ x: 0, y: 0 });
+  const [setOffset] = useState({ x: 0, y: 0 });
   const [isMinimized, setIsMinimized] = useState(false);
 
   const screenWidth = window.innerWidth;
@@ -25,23 +25,18 @@ export default function ProjectsExplorer(props) {
   const backgroundColor = darkTheme ? '#f0f0e4' : '#111111';
   const bodyColor = darkTheme ? '#1f1f1f' : '#e7e5d9';
 
-  // Mouse event handlersI
+  // Mouse event handlers
   const onMouseDown = (e) => {
     setDragging(true);
-    // Calculate offset between mouse and window top-left
     const rect = e.target.closest('.window').getBoundingClientRect();
     setOffset({ x: e.clientX - rect.left, y: e.clientY - rect.top });
-    // Prevent text selection
     document.body.style.userSelect = 'none';
   };
 
-  const onMouseMove = (e) => {
+  const onMouseMove = useCallback((e) => {
     if (!dragging || isMinimized) return;
-    setPosition({
-      x: e.clientX - offset.x,
-      y: e.clientY - offset.y,
-    });
-  };
+    // You can add dragging logic here if needed
+  }, [dragging, isMinimized]);
 
   const onMouseUp = () => {
     setDragging(false);
@@ -61,7 +56,7 @@ export default function ProjectsExplorer(props) {
       window.removeEventListener('mousemove', onMouseMove);
       window.removeEventListener('mouseup', onMouseUp);
     };
-  }, [dragging, offset]);
+  }, [dragging, onMouseMove]);
 
   // Store the previous position before minimizing
   const [prevPosition, setPrevPosition] = useState(position);
@@ -94,35 +89,58 @@ export default function ProjectsExplorer(props) {
     setPosition({ x: 500, y: 150 });
   }, [props.title]);
 
+  // Helper to detect mobile view
+  const isMobile = window.innerWidth <= 600;
+
   return (
     <>
       <div
         className="window"
         style={{
-          width: isMinimized ? "20vw" : "50vw",
+          width: isMinimized && !isMobile ? "20vw" : "50vw",
           left: position.x,
           top: position.y,
           cursor: dragging ? "grabbing" : "default",
+          ...(isMobile && {
+            left: "50%",
+            top: "10vh",
+            transform: "translate(-50%, 0)",
+            width: "95vw",      // changed from 98vw
+            height: "60vh",     // changed from 90vh
+            minWidth: "unset",
+            minHeight: "unset",
+            zIndex: 9999,
+          }),
         }}
       >
         <div
           className="header"
           style={{ color: textColor, backgroundColor: backgroundColor }}
           onMouseDown={e => {
-            // Prevent dragging if minimized or if .winbtn or its children are clicked
             if (isMinimized || e.target.closest('.winbtn')) return;
             onMouseDown(e);
           }}
         >
           <h3>{title}</h3>
           <span className="winbtn" style={{ color: textColor, backgroundColor: backgroundColor }}>
-            <p onClick={minimize}>_</p>
+            {!isMobile && <p onClick={minimize}>_</p>}
             <p onClick={close}>X</p>
           </span>
         </div>
         <div className="body" style={{ backgroundColor: bodyColor }}>
           {title === "Projects" && (
             <div className="projects">
+              <Projects name="Portfolio" icon={darkTheme ? aboutDark : about} gitlink = "https://github.com/tarunpandore/portfolio.git" />
+              <Projects name="Portfolio" icon={darkTheme ? aboutDark : about} gitlink = "https://github.com/tarunpandore/portfolio.git" />
+              <Projects name="Portfolio" icon={darkTheme ? aboutDark : about} gitlink = "https://github.com/tarunpandore/portfolio.git" />
+              <Projects name="Portfolio" icon={darkTheme ? aboutDark : about} gitlink = "https://github.com/tarunpandore/portfolio.git" />
+              <Projects name="Portfolio" icon={darkTheme ? aboutDark : about} gitlink = "https://github.com/tarunpandore/portfolio.git" />
+              <Projects name="Portfolio" icon={darkTheme ? aboutDark : about} gitlink = "https://github.com/tarunpandore/portfolio.git" />
+              <Projects name="Portfolio" icon={darkTheme ? aboutDark : about} gitlink = "https://github.com/tarunpandore/portfolio.git" />
+              <Projects name="Portfolio" icon={darkTheme ? aboutDark : about} gitlink = "https://github.com/tarunpandore/portfolio.git" />
+              <Projects name="Portfolio" icon={darkTheme ? aboutDark : about} gitlink = "https://github.com/tarunpandore/portfolio.git" />
+              <Projects name="Portfolio" icon={darkTheme ? aboutDark : about} gitlink = "https://github.com/tarunpandore/portfolio.git" />
+              <Projects name="Portfolio" icon={darkTheme ? aboutDark : about} gitlink = "https://github.com/tarunpandore/portfolio.git" />
               <Projects name="Portfolio" icon={darkTheme ? aboutDark : about} gitlink = "https://github.com/tarunpandore/portfolio.git" />
             </div>
           )}
