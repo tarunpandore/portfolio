@@ -131,17 +131,6 @@ export default function ProjectsExplorer(props) {
           {title === "Projects" && (
             <div className="projects">
               <Projects name="Portfolio" icon={darkTheme ? aboutDark : about} gitlink = "https://github.com/tarunpandore/portfolio.git" />
-              <Projects name="Portfolio" icon={darkTheme ? aboutDark : about} gitlink = "https://github.com/tarunpandore/portfolio.git" />
-              <Projects name="Portfolio" icon={darkTheme ? aboutDark : about} gitlink = "https://github.com/tarunpandore/portfolio.git" />
-              <Projects name="Portfolio" icon={darkTheme ? aboutDark : about} gitlink = "https://github.com/tarunpandore/portfolio.git" />
-              <Projects name="Portfolio" icon={darkTheme ? aboutDark : about} gitlink = "https://github.com/tarunpandore/portfolio.git" />
-              <Projects name="Portfolio" icon={darkTheme ? aboutDark : about} gitlink = "https://github.com/tarunpandore/portfolio.git" />
-              <Projects name="Portfolio" icon={darkTheme ? aboutDark : about} gitlink = "https://github.com/tarunpandore/portfolio.git" />
-              <Projects name="Portfolio" icon={darkTheme ? aboutDark : about} gitlink = "https://github.com/tarunpandore/portfolio.git" />
-              <Projects name="Portfolio" icon={darkTheme ? aboutDark : about} gitlink = "https://github.com/tarunpandore/portfolio.git" />
-              <Projects name="Portfolio" icon={darkTheme ? aboutDark : about} gitlink = "https://github.com/tarunpandore/portfolio.git" />
-              <Projects name="Portfolio" icon={darkTheme ? aboutDark : about} gitlink = "https://github.com/tarunpandore/portfolio.git" />
-              <Projects name="Portfolio" icon={darkTheme ? aboutDark : about} gitlink = "https://github.com/tarunpandore/portfolio.git" />
             </div>
           )}
           {title === "Skills" && (
